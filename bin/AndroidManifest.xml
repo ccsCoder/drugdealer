@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.neo.drugdealer.MultipleItemsList"
+            android:label="@string/title_activity_multiple_items_list"
+            android:parentActivityName="android.app.ExpandableListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ExpandableListActivity" />
+        </activity>
     </application>
 
 </manifest>
