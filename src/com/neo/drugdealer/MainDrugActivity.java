@@ -2,6 +2,7 @@ package com.neo.drugdealer;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -22,9 +23,12 @@ public class MainDrugActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-			EditText textview= (EditText) findViewById(R.id.multiLineText);
-				//scrView.set
-			textview.setText("Clicked Man");
+//			EditText textview= (EditText) findViewById(R.id.multiLineText);
+//				//scrView.set
+//			textview.setText("Clicked Man");
+			Intent intent = new Intent(MainDrugActivity.this, MultipleItemsList.class);
+			startActivity(intent);
+
 			}
 		});
 	}

@@ -6,6 +6,7 @@ import java.util.List;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ExpandableListActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,10 +34,17 @@ public class MultipleItemsList extends ExpandableListActivity implements OnChild
 		listView.setGroupIndicator(null);
 		listView.setClickable(true);
 		
+		Log.i("DEBUG:","onCreate, after setting ListView");
+		
 		//set parent group data
 		setGroupData();
+		
+		Log.i("DEBUG:","onCreate, after setGroupData()");
+		
 		//set child group data
 		setChildGroupData();
+		
+		Log.i("DEBUG:","onCreate, after setChildGroupData()");
 		
 		//Create a new Adapter.
 		CustomBaseExapandableListAdapter customAdapter = new CustomBaseExapandableListAdapter(groupItems, childGroupItems);
@@ -44,6 +52,8 @@ public class MultipleItemsList extends ExpandableListActivity implements OnChild
 		customAdapter.setInflater((LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE), this);
 		getExpandableListView().setAdapter(customAdapter);
 		listView.setOnChildClickListener(this);
+		
+		Log.i("DEBUG:","onCreate, after setting Inflater, and expandableListAdapter click listener.");
 		
 	}
 

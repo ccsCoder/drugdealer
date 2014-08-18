@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -48,19 +49,21 @@ public class CustomBaseExapandableListAdapter extends BaseExpandableListAdapter 
 
 	@Override
 	public View getChildView(int groupPosition, final int childPosition, boolean isLastChild, View convertView,ViewGroup parent) {
-		this.childItems = (List<String>) this.children.get(groupPosition);
+		//this.childItems = (List<String>) this.children.get(groupPosition);
+		//this.childItems = (List<String>) this.children;
+		Log.i("DEBUG:", "ChildPosition:"+childPosition+" corresponding string:"+this.children.get(childPosition).toString());
 		TextView tv = null;
 		if(convertView == null) {
 			convertView = this.inflater.inflate(R.layout.childrow,null);
 		}
 		tv = (TextView) convertView.findViewById(R.id.textView1);
-		tv.setText(this.childItems.get(childPosition));
+		tv.setText(this.children.get(childPosition).toString());
 		convertView.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Toast.makeText(activity, childItems.get(childPosition), Toast.LENGTH_SHORT).show();
+				Toast.makeText(activity, children.get(childPosition).toString(), Toast.LENGTH_SHORT).show();
 				
 			}
 		});
@@ -71,7 +74,8 @@ public class CustomBaseExapandableListAdapter extends BaseExpandableListAdapter 
 	@Override
 	public int getChildrenCount(int groupPosition) {
 		// TODO Auto-generated method stub
-		return ((List<String>)this.children.get(groupPosition)).size();
+		Log.i("DEBUG:","GroupPosition:"+groupPosition);
+		return groupPosition;
 	}
 
 	@Override

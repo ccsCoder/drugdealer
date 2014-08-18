@@ -37,8 +37,10 @@ public final class R {
     public static final class layout {
         public static final int activity_main_drug=0x7f030000;
         public static final int activity_multiple_items_list=0x7f030001;
-        public static final int item1=0x7f030002;
-        public static final int item2=0x7f030003;
+        public static final int childrow=0x7f030002;
+        public static final int grouprow=0x7f030003;
+        public static final int item1_old=0x7f030004;
+        public static final int item2_old=0x7f030005;
     }
     public static final class menu {
         public static final int main_drug=0x7f070000;
