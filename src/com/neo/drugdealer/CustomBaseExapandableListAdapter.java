@@ -38,11 +38,13 @@ public class CustomBaseExapandableListAdapter extends BaseExpandableListAdapter 
 	@Override
 	public Object getChild(int arg0, int arg1) {
 		// TODO Auto-generated method stub
+		Log.i("getChild():","--"+arg0+", "+arg1);
 		return null;
 	}
 
 	@Override
 	public long getChildId(int arg0, int arg1) {
+		Log.i("getChildId():","--"+arg0+", "+arg1);
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -51,13 +53,15 @@ public class CustomBaseExapandableListAdapter extends BaseExpandableListAdapter 
 	public View getChildView(int groupPosition, final int childPosition, boolean isLastChild, View convertView,ViewGroup parent) {
 		//this.childItems = (List<String>) this.children.get(groupPosition);
 		//this.childItems = (List<String>) this.children;
-		Log.i("DEBUG:", "ChildPosition:"+childPosition+" corresponding string:"+this.children.get(childPosition).toString());
+		Log.i("getChildView():", "GroupPosition:"+groupPosition);
+		Log.i("getChildView():", "ChildPosition:"+childPosition+" corresponding string:"+this.children.get(childPosition).toString());
 		TextView tv = null;
 		if(convertView == null) {
 			convertView = this.inflater.inflate(R.layout.childrow,null);
 		}
 		tv = (TextView) convertView.findViewById(R.id.textView1);
 		tv.setText(this.children.get(childPosition).toString());
+		
 		convertView.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -74,25 +78,28 @@ public class CustomBaseExapandableListAdapter extends BaseExpandableListAdapter 
 	@Override
 	public int getChildrenCount(int groupPosition) {
 		// TODO Auto-generated method stub
-		Log.i("DEBUG:","GroupPosition:"+groupPosition);
+		Log.i("getChildrenCount():","GroupPosition:"+groupPosition);
 		return groupPosition;
 	}
 
 	@Override
 	public Object getGroup(int groupPosition) {
 		// TODO Auto-generated method stub
+		Log.i("getGroup():","--"+groupPosition);
 		return null;
 	}
 
 	@Override
 	public int getGroupCount() {
 		// TODO Auto-generated method stub
+		Log.i("getGroupCount():",""+this.groupItems.size());
 		return this.groupItems.size();
 	}
 
 	@Override
 	public long getGroupId(int arg0) {
 		// TODO Auto-generated method stub
+		Log.i("getGroupId():",""+arg0);
 		return 0;
 	}
 	

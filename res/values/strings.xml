@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="component_name">Component/Drug Name</string>
     <string name="title_activity_multiple_items_list">MultipleItemsList</string>
+    <string name="title_activity_drug_landing">DrugLandingActivity</string>
 
 </resources>

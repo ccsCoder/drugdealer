@@ -30,6 +30,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.app.ExpandableListActivity" />
         </activity>
+        <activity
+            android:name="com.neo.drugdealer.DrugLandingActivity"
+            android:label="@string/title_activity_drug_landing" >
+        </activity>
     </application>
 
 </manifest>

@@ -24,33 +24,41 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
-        public static final int detailsView=0x7f080003;
-        public static final int linearLayout=0x7f080000;
-        public static final int multiLineText=0x7f080005;
-        public static final int searchButton=0x7f080004;
-        public static final int text=0x7f080006;
-        public static final int textSeparator=0x7f080007;
-        public static final int textView1=0x7f080001;
-        public static final int txtComponentName=0x7f080002;
+        public static final int action_settings=0x7f08000b;
+        public static final int detailsView=0x7f080004;
+        public static final int lblListHeader=0x7f080009;
+        public static final int lblListItem=0x7f08000a;
+        public static final int linearLayout=0x7f080001;
+        public static final int lvExp=0x7f080000;
+        public static final int multiLineText=0x7f080006;
+        public static final int searchButton=0x7f080005;
+        public static final int text=0x7f080007;
+        public static final int textSeparator=0x7f080008;
+        public static final int textView1=0x7f080002;
+        public static final int txtComponentName=0x7f080003;
     }
     public static final class layout {
-        public static final int activity_main_drug=0x7f030000;
-        public static final int activity_multiple_items_list=0x7f030001;
-        public static final int childrow=0x7f030002;
-        public static final int grouprow=0x7f030003;
-        public static final int item1_old=0x7f030004;
-        public static final int item2_old=0x7f030005;
+        public static final int activity_drug_landing=0x7f030000;
+        public static final int activity_main_drug=0x7f030001;
+        public static final int activity_multiple_items_list=0x7f030002;
+        public static final int childrow=0x7f030003;
+        public static final int grouprow=0x7f030004;
+        public static final int item1_old=0x7f030005;
+        public static final int item2_old=0x7f030006;
+        public static final int list_group=0x7f030007;
+        public static final int list_item=0x7f030008;
     }
     public static final class menu {
-        public static final int main_drug=0x7f070000;
-        public static final int multiple_items_list=0x7f070001;
+        public static final int drug_landing=0x7f070000;
+        public static final int main_drug=0x7f070001;
+        public static final int multiple_items_list=0x7f070002;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int component_name=0x7f050003;
         public static final int hello_world=0x7f050002;
+        public static final int title_activity_drug_landing=0x7f050005;
         public static final int title_activity_multiple_items_list=0x7f050004;
     }
     public static final class style {
